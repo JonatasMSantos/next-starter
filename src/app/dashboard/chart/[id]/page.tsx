@@ -4,6 +4,12 @@ interface ChartProps {
   }
 }
 
+export async function generateMetadata({ params }: ChartProps) {
+  return {
+    title: `Dash ${params.id}`,
+  }
+}
+
 export default async function Product({ params }: ChartProps) {
   return (
     <>
